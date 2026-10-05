@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+    <main>
+        <div id="Product" class="product-picture">
+            <h3>ASUS Zenbook 26 OLED</h3>
+            <img src="laptop.png" alt="Photo of ASUS Zenbook 26 OLED" width="300" height="300" />
+            <p class="product-description">ASUS Zenbook 26 OLED - Black space</p>
+        </div>
+        <!-- product detailes -->
+        <div class="product-detail">
+            <h3>More Detailes</h3>
+            <ul>
+                <li>Intel 9</li>
+                <li>RAM: 32GB LPDDR5X</li>
+                <li>Memory: 1TB SSD NVMe M.2</li>
+                <li>Screen: 3K OLED</li>
+                <li>Lightweight</li>
+            </ul>
+        </div>
+        <!-- cart detai -->
+        <div>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" step="1" value="1">
+            <!-- Ensure this button calls the function, NOT window.location directly -->
+            <button type="button" onclick="addToCart()">Add To Cart</button>
+            <br><br>
+            <button type="button" onclick="window.location.href='cart.html'">View Cart</button>
+        </div>
+    </main>
+
+    <!-- Script goes here -->
+    <script>
+        function addToCart() {
+            const selectedQuantity = document.getElementById('quantity').value;
+            localStorage.setItem('asusQuantity', selectedQuantity);
+            window.location.href = 'cart.html';
+        }
+    </script>
+</body>
+</html>

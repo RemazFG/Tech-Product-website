@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOCO.Tech cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+    <h1>your cart is here</h1>
+    <table>
+        <tr>
+            <th>Item name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th> <!-- 1. Added a new column header for the Total -->
+        </tr>
+        <tr>
+            <td>ASUS Zenbook 26 OLED</td>
+            <td>
+                <!-- 2. Added onchange="calculateTotal()" so it updates if they change it here -->
+                <input type="number" id="quantity" name="quantity" min="1" max="10" step="1" value="1" onchange="calculateTotal()">
+            </td>
+            <!-- We will use this ID in JavaScript to read the base price -->
+            <td id="item-price">1200</td> 
+            
+            <!-- We will use this ID in JavaScript to inject the final math -->
+            <td id="item-total">$1200</td> 
+        </tr>
+    </table>
+
+    <script>
+        // This function does the actual math
+        function calculateTotal() {
+            // Get the current number from the quantity box
+            const quantity = document.getElementById('quantity').value;
+            
+            // Get the base price (1200). We use innerText to read what's between the <td> tags.
+            const priceText = document.getElementById('item-price').innerText;
+            const price = Number(priceText); // Convert the text "1200" into a real number for math
+            
+            // Do the math
+            const total = quantity * price;
+            
+            // Update the screen with the new total, adding the dollar sign back
+            document.getElementById('item-total').innerText = "$" + total;
+        }
+
+        // This runs automatically when the page opens
+        window.onload = function() {
+            // First, load the saved quantity from the previous page
+            const savedQuantity = localStorage.getItem('asusQuantity');
+            if (savedQuantity !== null) {
+                document.getElementById('quantity').value = savedQuantity;
+            }
+            
+            // Then, immediately run the math so the total is correct on load
+            calculateTotal();
+        };
+    </script>
+</body>
+</html>
