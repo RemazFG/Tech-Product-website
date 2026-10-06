@@ -84,7 +84,7 @@ nav {
     gap: 2rem; /* Puts clean spacing between the links */
     margin: 0 60px 0;
     align-items: center;
-    transition: all 0.2s ease;
+    transition: 2s ease;
 }
 
 nav a {
