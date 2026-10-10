@@ -19,7 +19,7 @@
 
 body {
     /* Navy to White gradient */
-    background: linear-gradient(to bottom, #0B1120, #FFFFFF);
+    background: linear-gradient(to bottom, #4560a3, #FFFFFF);
     background-attachment: fixed;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -31,7 +31,7 @@ body {
 /* --- 3. Header & Navigation UI --- */
 header {
     /* Primary blue color with 90% opacity */
-    background-color: rgba(21, 53, 122, 0.9); 
+    /* background-color: rgba(16, 38, 85, 0.9);  */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 1rem 5%;
@@ -52,7 +52,7 @@ header {
     cursor: pointer;
     margin: 0 20px 0;
     color: #FFFFFF; /* Makes the word 'Tech' white */
-    filter: drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.4)); /* Adds the shadow around the whole logo */
+
 }
 
 .logo span {
