@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Account - Soco.Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Logo</h2>
+        <nav class="nav-links"><a href="index.html">Home</a><a href="index.html">Products</a></nav>
+        <button class="btn btn-outline">Menu</button>
+    </header>
+
+    <main class="narrow-container">
+        <!-- Personal Information -->
+        <section class="account-section">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                <div class="img-placeholder" style="width: 80px; height: 80px; border-radius: 50%;"></div>
+                <button class="btn btn-outline">Upload photo</button>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2>Personal information</h2>
+            </div>
+            <div class="form-row">
+                <div class="input-group"><label>First name and Last name</label><input type="text" placeholder="Enter your first name"></div>
+                <div class="input-group"><label>&nbsp;</label><input type="text" placeholder="Enter your last name"></div>
+            </div>
+            <div class="input-group"><label>Email address</label><input type="email" placeholder="email@example.com"></div>
+            <div class="input-group"><label>Country</label><select><option>Select one...</option></select></div>
+            <div style="text-align: right;"><button class="btn">Save</button></div>
+        </section>
+
+        <!-- Notifications -->
+        <section class="account-section">
+            <h2>Notifications</h2>
+            <div class="form-row" style="margin-top: 1.5rem;">
+                <div><strong>Choose where you get notified</strong></div>
+                <div><label><input type="checkbox" checked> Email notification</label></div>
+            </div>
+            <div style="text-align: right; margin-top: 1rem;"><button class="btn">Save</button></div>
+        </section>
+
+        <!-- Order History -->
+        <section class="account-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2>Order History</h2>
+                <div><button class="btn btn-outline">Button</button> <button class="btn">Button</button></div>
+            </div>
+            <table class="cart-table">
+                <tr><th>Order ID</th><th>Price</th><th>Date</th><th>Status</th></tr>
+                <tr><td>Laptop</td><td>hello@relume.io</td><td>1/11/2050</td><td>1/11/2050</td></tr>
+            </table>
+        </section>
+
+        <!-- Saved Products -->
+        <section class="account-section">
+            <h2>Saved Products</h2>
+            <div class="product-grid" style="margin-top: 1.5rem;">
+                <div class="product-card">
+                    <div class="img-placeholder"></div>
+                    <button class="btn" style="width: 100%; margin-top: 1rem;">Add to cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="img-placeholder"></div>
+                    <button class="btn" style="width: 100%; margin-top: 1rem;">Add to cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Update Password -->
+        <section class="account-section">
+            <h2>Update Password</h2>
+            <div class="input-group" style="margin-top: 1.5rem;"><label>Current Password*</label><input type="password"></div>
+            <div class="input-group"><label>New Password*</label><input type="password"></div>
+            <div class="input-group"><label>Confirm New Password*</label><input type="password"></div>
+            <button class="btn">Update Password</button>
+        </section>
+    </main>
+</body>
+</html>
