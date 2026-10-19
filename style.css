@@ -1,9 +1,11 @@
 /* --- Global Variables & Reset --- */
 :root {
-    --primary: #3B2E5A; /* Wireframe Purple */
-    --primary-hover: #C084FC;
+    --primary: #372345; /* Wireframe Purple */
+    --secondry: #4A2F5C;
+    --primary-hover1: #BA76E6;
+    --primary-hover2: #E773C1;
     --bg-main: #FFFFFF;
-    --bg-alt: #F9FAFB;
+    --bg-alt: #e5e9ed;
     --text-main: #111827;
     --text-muted: #6B7280;
     --border: #E5E7EB;
@@ -16,10 +18,55 @@ a { text-decoration: none; color: inherit; }
 main { max-width: 1200px; margin: 0 auto; padding: 2rem 5%; }
 
 /* --- UI Components --- */
-.btn { background-color: var(--primary); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; text-align: center; display: inline-block; }
-.btn:hover { background-color: var(--primary-hover); }
 .btn-outline { background-color: transparent; border: 1px solid var(--border); color: var(--text-main); }
 .img-placeholder { background-color: var(--placeholder); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+/* Button style */
+.btn {
+    background: var(--bg-alt);
+    color: var(--primary); 
+    border: none; 
+    padding: 0.75rem 1.5rem; 
+    border-radius: 8px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    text-align: center; 
+    display: inline-block; 
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    background: var(--bg-main);
+    border: 2px solid transparent var(--bg-alt);;
+    color: #BA76E6; /* Solid purple matches the gradient perfectly */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(186, 118, 230, 0.4);
+}
+
+/* --- Primary Buttons --- */
+.btn-primary { 
+    background: linear-gradient(to right,  #BA76E6, #E773C1);
+    color: white; 
+    border: none; 
+    padding: 0.75rem 1.5rem; 
+    border-radius: 8px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    text-align: center; 
+    display: inline-block; 
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover { 
+    /* Layer 1: Solid White background (padding-box) */
+    /* Layer 2: Gradient background acting as the border (border-box) */
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, #BA76E6, #E773C1) border-box;
+    
+    border: 2px solid transparent;
+    color: #BA76E6; /* Solid purple matches the gradient perfectly */
+    
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(186, 118, 230, 0.4);
+}
 
 /* --- Header & Footer --- */
 header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; border-bottom: 1px solid var(--border); }
