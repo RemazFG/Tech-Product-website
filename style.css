@@ -41,6 +41,23 @@ main { max-width: 1200px; margin: 0 auto; padding: 2rem 5%; }
     box-shadow: 0 4px 12px rgba(186, 118, 230, 0.4);
 }
 
+.btn-arrow{
+    background: var(--bg-main);
+    border: none; 
+    padding: 0.75rem 1.5rem; 
+    border-radius: 8px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    text-align: center; 
+    display: inline-block; 
+    transition: all 0.3s ease;
+}
+.btn-arrow:hover{
+    background: var(--bg-main);
+    color: #BA76E6; /* Solid purple matches the gradient perfectly */
+    transform: translateY(-2px);
+}
+
 /* --- Primary Buttons --- */
 .btn-primary { 
     background: linear-gradient(to right,  #BA76E6, #E773C1);
