@@ -2,49 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In - SOCO.Tech</title>
+    <title>Log In - Soco.Tech</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <p class="logo" onclick="window.location.href='index.html'"><span>Soco.</span>Tech</p>
-        <nav>
-            <a href="index.html#Product">Products</a>
-            <a href="index.html">Home</a>
-            <a href="index.html#About">About Us</a>
-            <a href="index.html#contact">Contact Us</a>
-            <a href="cart.html">Cart</a>
-        </nav>
-        <div class="header-buttons">
-            <button class="btn-signup" onclick="window.location.href='signup.html'">Sign Up</button>
-        </div>
+        <h2>Logo</h2>
     </header>
 
-    <main class="form-page">
-        <div class="form-card">
-            <h2>Welcome Back</h2>
-            <p class="subtitle">Log in to your SOCO.Tech account</p>
-            
-            <form action="#" method="POST">
-                <table class="form-table">
-                    <tr>
-                        <td><label for="email">Email Address:</label></td>
-                        <td><input type="email" id="email" name="email" placeholder="name@example.com" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="password">Password:</label></td>
-                        <td><input type="password" id="password" name="password" placeholder="••••••••" required></td>
-                    </tr>
-                    <tr>
-                        <!-- colspan="2" makes the button stretch across both columns -->
-                        <td colspan="2"><button type="submit" class="full-width-btn">Log In</button></td>
-                    </tr>
-                </table>
-            </form>
-            
-            <p class="form-footer">Don't have an account? <a href="signup.html">Sign Up</a></p>
+    <main class="auth-container">
+        <div class="auth-tabs">
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html" class="active">Login</a>
         </div>
+        
+        <h1 style="margin-bottom: 1rem;">Login</h1>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">Lorem ipsum dolor sit amet adipiscing elit.</p>
+
+        <form>
+            <div class="input-group" style="text-align: left;">
+                <label>Email*</label>
+                <input type="email">
+            </div>
+            <div class="input-group" style="text-align: left;">
+                <label>Password*</label>
+                <input type="password">
+            </div>
+            <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;" onclick="window.location.href='account.html'">Login</button>
+            <button type="button" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Login with Google</button>
+        </form>
     </main>
 </body>
 </html>
