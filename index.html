@@ -2,65 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Product</title>
+    <title>Soco.Tech - Home</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font 1 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-<!-- Font 2 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        
-        <p class="logo"><span>Soco.</span>Tech</p>
-        <nav>
-            <a href="#Product">Products</a>
-            <a href="#Home">Home</a>
-            <a href="#About">About Us</a>
-            <a href="#contact">Contact Us</a>
-            <a href="cart.html">Cart</a>
-            <a href="signup.html">Sign Up</a>
-            <a href="login.html">Log In</a>
+        <h2>Logo</h2>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html">Products</a>
+            <a href="index.html">About us</a>
+            <a href="index.html">Contact</a>
         </nav>
+        <a href="login.html" class="btn btn-outline">Log in</a>
     </header>
 
     <main>
-        <!-- Home Soco. Tech -->
-        <div id="Home">
-            <h1>Welcome to <span>SOCO.Tech</span></h1>
-            <p>A Website for Technologies </p>
-        </div>
+        <section class="hero">
+            <div>
+                <p>Featured</p>
+                <h1>The machine for serious work</h1>
+                <p>A flagship laptop built for those who demand performance without compromise.</p>
+            </div>
+            <div class="img-placeholder" style="height: 400px;">Image</div>
+        </section>
 
-        <!-- product picture -->
-        <div id="Product" class="product-picture">
-            <h3>ASUS Zenbook 26 OLED</h3>
-            <img src="laptop.png" alt="Photo of ASUS Zenbook 26 OLED" width="300" height="300" />
-            <p class="product-description">ASUS Zenbook 26 OLED - Black space</p>
-            <button type="button" onclick="window.location.href='product_detail.html'">View Product</button>
-        </div>
+        <section class="product-grid">
+            <div class="product-card">
+                <div class="img-placeholder">Image</div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                    <strong>Zenbook OLED</strong>
+                    <strong>$1,299</strong>
+                </div>
+                <button class="btn btn-outline" style="width: 100%;">Add to cart</button>
+            </div>
+            <div class="product-card">
+                <div class="img-placeholder">Image</div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                    <strong>MacBook Pro</strong>
+                    <strong>$1,599</strong>
+                </div>
+                <button class="btn btn-outline" style="width: 100%;">Add to cart</button>
+            </div>
+            <div class="product-card">
+                <div class="img-placeholder">Image</div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                    <strong>ThinkPad X1</strong>
+                    <strong>$1,449</strong>
+                </div>
+                <button class="btn btn-outline" style="width: 100%;">Add to cart</button>
+            </div>
+        </section>
 
-
-        <!-- About Soco.Tech -->
-        <div id="About">
-            <h2>About Us</h2>
-            <p>Soco.Tech is website for technologies, created on SEP 2026, 
-                and our first branch was in Khobar. We are 
-                working for better experience.</p>
-        </div>
-
-        <!-- contact us  -->
-        <div id="contact">
-            <h2>if you have any Questions contact us by :</h2>
-            <p>WhatsApp: <a href="tel:+966501234567">+966 50 123 4567</a></p>
-            <p>Send Email to: <a href="mailto:reeeez191@outlook.com">reeeez191@outlook.com</a></p>
-
-        </div>
+        <section class="contact-grid">
+            <div><h3>Email</h3><p>support@soco.tech</p></div>
+            <div><h3>Phone</h3><p>+966 55 000 0000</p></div>
+            <div><h3>Office</h3><p>King Fahd Road, Al Khobar</p></div>
+            <div><h3>Office</h3><p>King Fahd Road, Al Khobar</p></div>
+        </section>
     </main>
-    
 </body>
 </html>
