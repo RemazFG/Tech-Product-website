@@ -1,7 +1,7 @@
 /* --- Global Variables & Reset --- */
 :root {
-    --primary: #C084FC; /* Wireframe Purple */
-    --primary-hover: #A855F7;
+    --primary: #3B2E5A; /* Wireframe Purple */
+    --primary-hover: #C084FC;
     --bg-main: #FFFFFF;
     --bg-alt: #F9FAFB;
     --text-main: #111827;
@@ -61,3 +61,103 @@ footer { border-top: 1px solid var(--border); padding: 3rem 5%; display: grid; g
 /* Payment & Account Pages */
 .narrow-container { max-width: 700px; margin: 0 auto; }
 .account-section { margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+
+/* --- 12. Footer Styling --- */
+.site-footer {
+    background-color: #3B2E5A;
+    color: white;
+    padding: 4rem 5% 2rem;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    width: 1440px;
+}
+
+/* Main Vertical Container */
+.footer-vertical-container {
+    display: flex;
+    flex-direction: column; /* Forces internal containers to stack vertically */
+    gap: 4rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Top Horizontal Container (Newsletter + Table) */
+.footer-horizontal-top {
+    display: flex;
+    flex-direction: row; /* Forces the Newsletter and Table to sit side-by-side */
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+}
+
+.footer-newsletter {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.footer-links-wrapper {
+    flex: 2; /* Gives the table more width than the newsletter */
+    min-width: 700px;
+    margin-left: 350px;
+}
+
+/* Newsletter UI Elements */
+.footer-logo-icon { margin-bottom: 1.5rem; }
+.newsletter-desc { margin-bottom: 1.5rem; color: #E5E7EB; font-size: 0.85rem; line-height: 1.5; max-width: 90%; }
+.newsletter-input-group { display: flex; gap: 0.5rem; margin-bottom: 1rem; width: 100%; }
+
+.newsletter-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.newsletter-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.newsletter-disclaimer { font-size: 0.7rem; color: #9CA3AF; line-height: 1.5; max-width: 95%; }
+
+/* Table Elements */
+.footer-links-table { width: 100%; border-collapse: collapse; border: none; text-align: left; }
+.footer-links-table th { padding-bottom: 1.5rem; color: white; font-size: 0.9rem; font-weight: 600; border: none; }
+.footer-links-table tbody { line-height: 2.2; font-size: 0.8rem; color: #D1D5DB; }
+.footer-links-table td { border: none; }
+.footer-links-table a { text-decoration: none; color: inherit; }
+
+.nowrap { white-space: nowrap; }
+.social-link { display: inline-flex; align-items: center; gap: 0.5rem; }
+.social-icon { font-size: 1rem; }
+
+/* Bottom Horizontal Container (Legal Area) */
+.footer-horizontal-bottom {
+    display: flex;
+    flex-direction: row; /* Forces copyright and legal links to sit side-by-side */
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    color: #9CA3AF;
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-horizontal-bottom p { margin: 0; }
+.footer-legal-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.footer-legal-links a { text-decoration: underline; color: inherit; }
