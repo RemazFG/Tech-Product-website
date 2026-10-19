@@ -69,8 +69,8 @@ main { max-width: 1200px; margin: 0 auto; padding: 2rem 5%; }
 }
 
 /* --- Header & Footer --- */
-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; border-bottom: 1px solid var(--border); }
-.nav-links { display: flex; gap: 2rem; }
+header { background: var(--primary); display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; border-bottom: 1px solid var(--border); }
+.nav-links {color: var(--bg-main); display: flex; gap: 2rem; }
 footer { border-top: 1px solid var(--border); padding: 3rem 5%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 4rem; }
 
 /* --- Form Inputs --- */
